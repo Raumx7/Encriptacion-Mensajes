@@ -1,4 +1,4 @@
-# Proyecto-Integrador
+# Encriptación de mensajes
 Cifrado de Hill
 
 Contexto:
