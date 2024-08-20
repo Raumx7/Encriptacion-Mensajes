@@ -5,7 +5,7 @@ Contexto:
 
 Este proyecto está basado en el cifrado de Hill, en criptografía básica este es un cifrado de sustitución poligráfica basado en el álgebra lineal. Inventado por el matemático estadounidense Lester S. Hill en 1929 y utilizado por el ejército de los Estados Unidos de América en la segunda guerra mundial. Pienso que este cifrado es una muy buena aplicación del álgebra lineal y llevarlo a la programación puede ahorrar mucho tiempo a la hora de encriptar o desencriptar mensajes.
 
-Metodo de cifrado:
+Método de cifrado:
 
 Cada letra del alfabeto inglés está representado por un numero A = 0, B = 1, C = 3, ... , Z = 25 y un espacio representado por '_' asociado al numero 26. Para encriptar un mensaje, cada bloque de n letras (considerados como un vector) está multiplicado por una matriz. La matriz usada para la encriptación es la llave de cifrado, y tiene que ser escogida aleatoriamente del conjunto de matrices invertibles n×n (modular 26). El cifrado puede naturalmente, ser adaptado a un alfabeto representado con cualquier orden numerico y/o cambiando el número (modular 26) siempre y cuando la matriz n×n (modular x) sea invertible. Posterior a ello se multiplica cada vector del mensaje ordenado en 3 filas por la matriz 3x3, así obteniendo una nueva matriz B a la que sacaremos módulo 27. Después sólo queda acomodar las columnas de la matriz en una linea y sustituir los numeros por sus respectivas letras.
 
@@ -18,7 +18,7 @@ Algoritmo cifrado:
 Entradas:
 
 1. Mensaje
-2. Matriz llave 3x3 modular (26)
+2. K """ Matriz llave 3x3 modular (26) """
 
 Proceso:
 
@@ -35,3 +35,12 @@ Proceso:
 Salidas:
 
 1. caracteres del vector alfabeto
+
+Algoritmo descifrado:
+
+Entradas:
+
+1. Mensaje encriptado
+2. K """ Llave de cifrado """
+3. 
+
