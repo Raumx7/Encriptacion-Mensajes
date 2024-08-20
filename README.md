@@ -1,13 +1,17 @@
 # Encriptación de mensajes
-Cifrado de Hill
+CIFRADO DE HILL
 
 Contexto:
 
-Este proyecto está basado en el cifrado de Hill, en criptografía básica este es un cifrado de sustitución poligráfica basado en el álgebra lineal. Inventado por el matemático estadounidense Lester S. Hill en 1929 y utilizado por el ejército de los Estados Unidos de América en la segunda guerra mundial. Pienso que este cifrado es una muy buena aplicación del álgebra lineal y llevarlo a la programación puede ahorrar mucho tiempo a la hora de encriptar o desencriptar mensajes.
+Este proyecto está basado en el cifrado de Hill, en criptografía básica este es un cifrado de sustitución poligráfica basado en el álgebra lineal. Inventado por el matemático estadounidense Lester S. Hill en 1929 y utilizado por el ejército de los Estados Unidos de América en la segunda guerra mundial. 
+
+¿Por qué me llamó la atención?
+
+Pienso que este cifrado es una muy buena aplicación del álgebra lineal y llevarlo a la programación puede ahorrar mucho tiempo a la hora de encriptar o desencriptar mensajes. Además, lleva a la practica el planteamiento de algoritmos de un proceso largo y de cierta manera complejo, ya que hacerlo a mano sería muy tedioso y fácil de cometer errores. También cabe mencionar que este algoritmo nos plantea una reflexión sobre como se puede proteger la información para que personas malintensionadas no hagan mal uso de ella.
 
 Método de cifrado:
 
-Cada letra del alfabeto inglés está representado por un numero A = 0, B = 1, C = 3, ... , Z = 25 y un espacio representado por '_' asociado al numero 26. Para encriptar un mensaje, cada bloque de n letras (considerados como un vector) está multiplicado por una matriz. La matriz usada para la encriptación es la llave de cifrado, y tiene que ser escogida aleatoriamente del conjunto de matrices invertibles n×n (modular 26). El cifrado puede naturalmente, ser adaptado a un alfabeto representado con cualquier orden numerico y/o cambiando el número (modular 26) siempre y cuando la matriz n×n (modular x) sea invertible. Posterior a ello se multiplica cada vector del mensaje ordenado en 3 filas por la matriz 3x3, así obteniendo una nueva matriz B a la que sacaremos módulo 27. Después sólo queda acomodar las columnas de la matriz en una linea y sustituir los numeros por sus respectivas letras.
+Cada letra del alfabeto inglés está representado por un numero A = 0, B = 1, C = 3, ... , Z = 25 y un espacio representado por '_' asociado al número 26. Para encriptar un mensaje, cada bloque de n letras (considerados como un vector) está multiplicado por una matriz. La matriz usada para la encriptación es la llave de cifrado, y tiene que ser escogida aleatoriamente del conjunto de matrices invertibles n×n (modular 26). El cifrado puede naturalmente, ser adaptado a un alfabeto representado con cualquier orden numerico y/o cambiando el número (modular 26) siempre y cuando la matriz n×n (modular x) sea invertible. Posterior a ello se multiplica cada vector del mensaje ordenado en 3 filas por la matriz 3x3, así obteniendo una nueva matriz B a la que sacaremos módulo 27. Después sólo queda acomodar las columnas de la matriz en una linea y sustituir los numeros por sus respectivas letras.
 
 Método para decifrar:
 
@@ -42,5 +46,3 @@ Entradas:
 
 1. Mensaje encriptado
 2. K """ Llave de cifrado """
-3. 
-
