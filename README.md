@@ -1,4 +1,4 @@
-# Encriptación de mensajes
+# Cifrado de mensajes
 CIFRADO DE HILL
 
 Contexto:
