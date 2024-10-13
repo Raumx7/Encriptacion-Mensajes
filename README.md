@@ -19,30 +19,23 @@ Para desencriptar se necesita el mensaje representado por los respectivos numero
 
 Algoritmo cifrado:
 
-Entradas:
-
-1. Mensaje
-2. K """ Matriz llave 3x3 modular (26) """
-
-Proceso:
-
-1. Convertir el string con n caracteres en Mensaje a mayúsculas y sustituir espacios por '_'
-2. Asignar un numero a cada letra y espacio de Mensaje de acuerdo al vector alfabeto
-3. Separar Mensaje en arreglos unidimensionales de 3 componentes cada uno y rellenar con espacios ('_' = 26) las componentes faltantes
-4. Formar una matriz A de 3xn con los arreglos previos
-5. Ingresar o inicializar el proceso para construir una matriz K (llave)
-6. Validar que la matriz K sea invertible modular(26), para ello se verifica que el determinante sea distinto de cero y que al dividirlo por 2 y 13 el residuo no sea cero.
+1. Tener un mensaje de letras y espacios
+2. Asignar un numero a cada letra y espacio del mensaje de acuerdo al alfabeto ingles  A = 0, B = 1, C = 3, ... , Z = 25, ' ' = 26
+3. Separar el mensaje numerico en matrices de 3x1.
+4. Formar una matriz A de 3xn con las matrices columna previamente formadas
+5. Contar con una matriz K (llave)
+6. Validar que la matriz K sea invertible modular(27), para ello se verifica que el determinante sea distinto de cero y que al dividirlo por 3 el residuo no sea cero.
 7. Realizar la multiplicacón de K * A para obtener una matriz B
 8. Obtener B mod 27
 9. Ordenar cada columna de B en forma horizontal y asignar a los numeros las letras correspondientes del vector alfabeto
-
-Salidas:
-
-1. caracteres del vector alfabeto
+10. Remplazar cada numero con la letra correspondiente
 
 Algoritmo descifrado:
 
-Entradas:
-
-1. Mensaje encriptado
-2. K """ Llave de cifrado """
+1. Tener el mensaje cifrado y una matriz K (llave)
+2. Asignar un numero a cada letra del mensaje respectivamente
+3. Separar el mensaje en grupos de 3 y crear una matriz B donde cada columna corresponde a los grupos formados
+4. Calcular la inversa de K y sacar modulo 27 a sus elementos
+5. Calcular KXB y sacar nuevamente modulo 27 a sus elementos, de ello se obtiene una matriz A
+6. Ordenar cada columna de A en forma horizontal y asignar a los numeros las letras correspondientes del vector alfabeto
+7. Remplazar cada numero con la letra correspondiente
